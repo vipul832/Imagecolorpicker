@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Smooch+Sans:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
+    /* font-weight:500; */
+    font-family: 'Montserrat',sans-serif;
+    font-size: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    /* height: 200vh; */
+    /*background-image: repeating-radial-gradient(farthest-corner at 200px 200px,#187BFF 30%,#5AB7F5 60%);*/
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    display:flex;
+    justify-content:space-around;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    align-items: center;
+    background-color: #a0d5f8; 
+    border-radius: 0px 0px 50px 50px;
+    border-bottom: solid #187BFF;
+}
+
+header li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+header li a{
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+    padding: 10px;
+    border-radius:10px;
+    margin: 20px;
+}
+
+
+header li a:hover{
+    /* background-color: #187BFF;*/
+    color: #ffff; 
+    text-decoration: underline #187BFF 5px;
+}
+
+/* header li.active a{
+    background-color: #187BFF;
+    color: #ffff;
+} */
+
+.sec2{
+  margin:200px 100px 200px 100px;
+}
+.form1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form1 input{
+    padding: 5px;
+}
+
+.color{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-color{
+    margin: 10px;
+    border: none;
+    border:solid gray 1px;
+}
+
+.cinput{
+    width: 100px;
+    margin: 20px;
+}
+.cbtn{
+    margin: 20px;
+}
+
+
+footer{
+    position: relative;
+    margin-top: 200px;
+    background-color: #187BFF;
+    padding: 20px;
+    justify-content: space-evenly;
+    display: flex;
+    width: auto;
+}
+
+.com-detail{
+    color: white;
+}
+
+.com-logo{
+    padding: 10px;
+}
+
+.com-info{
+    width: 400px;
+}
+
+.com-info p{
+    font-size: 15px;
+}
+
+.right{
+    margin: 10px 0px;
+}
+
+.right p{
+    font-size: 15px;
+}
+
+.com-ser{
+    color: white;
+}
+
+.com-ser h2{
+    padding: 10px 10px 5px 0px;
+    border-bottom: solid #000000 ;
+    margin-bottom: 5px;
+}
+.com-ser ul li{
+    list-style-type: none;
+    font-size: 15px;
+    padding: 5px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Css link-->
+    <link rel="stylesheet" href="../static/imagecss.css">
+
+    <title>Home page</title>
+
+</head>
+
+<body>
+    <header>
+        <p style="font-size: 25px;">LOGO</p>
+        <nav>
+            <ul class="nav_link">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="#">Sevices</a></li>
+                <li><a href="#">How It Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="sec2">
+        <div class="form1">
+            <form action="/image" method="post" enctype="multipart/form-data">
+                <input type="file" id="imagefile" name="imagefile" accept=".jpg,.png">
+                <input type="number" name="cnum" placeholder="number of color">
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </form>
+        </div>
+
+
+        <div class="color">
+            {% if upimage %}
+            {% for i in upimage%}
+            <div>
+                <button class="box-color" style="background-color: {{i}};width: 100px;height: 100px;"></button>
+                <input class="cinput" id="{{i}}" type="text" value="{{i}}">
+                <button class="cbtn" id={{i}} onclick="myFunction(this.id)">Copy text</button>
+            </div>
+            <script>
+                function myFunction(clickedbtn) {
+                    // /* Get the text field */
+                    // var copyText = document.getElementById(clickedbtn);
+
+                    // /* Select the text field */
+                    // copyText.select();
+                    // copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                    /* Copy the text inside the text field */
+                    navigator.clipboard.writeText(clickedbtn);
+
+                    /* Alert the copied text */
+                    alert("Copied the text: " + clickedbtn);
+                }
+            </script>
+            {%endfor%}
+            {% endif %}
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="com-detail">
+            <div class="com-logo">
+                <h1>LOGO</h1>
+            </div>
+            <div class="com-info">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repudiandae placeat, esse quibusdam
+                    porro dignissimos!
+                </p>
+            </div>
+            <div class="right">
+                <p>
+                    @LOGO PVT LTD 2022 All right reserved
+                </p>
+            </div>
+        </div>
+
+        <div class="com-ser">
+            <h2>Company Services</h2>
+            <ul>
+                <li>Extract Color from Image</li>
+                <li>Merge Image</li>
+                <li>Image to PDF</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
